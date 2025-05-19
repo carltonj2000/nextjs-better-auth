@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
@@ -34,8 +34,11 @@ export default function RootLayout({
         <nav className="flex bg-blue-300 py-2 px-3 gap-2 justify-center mb-4">
           <Link href="/">Home</Link>
           <Link href="/dashboard">Dashboard</Link>
-          <Link href="/signup">Sign Up</Link>
-          <Link href="/signin">Sign In</Link>
+          <div className="flex gap-2">
+            <Link href="/signup">Sign Up</Link>
+            <Link href="/signin">Sign In</Link>
+          </div>
+          <Link href="/signout">Sign Out</Link>
         </nav>
         <div className="w-2xl mx-auto flex flex-col items-center">
           {children}

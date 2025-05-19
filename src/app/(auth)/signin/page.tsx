@@ -1,4 +1,4 @@
-import { SignUpForm } from "./signup-form";
+import { SignInForm } from "./signin-form";
 import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 
@@ -15,11 +15,10 @@ export default async function Page() {
           <a href="/signout" className="text-blue-400 underline">
             Sign out
           </a>{" "}
-          first if you want to sign up as another user.
+          first if you want to sign in as another user.
         </p>
       </div>
     );
   }
-
-  return <SignUpForm />;
+  return <SignInForm />;
 }
